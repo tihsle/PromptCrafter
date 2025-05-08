@@ -1,10 +1,10 @@
 # PromptCrafter
 PromptCrafter provides an API backend for saving, categorizing, sharing, and testing generative AI prompts.
 
-## Description
+## 1.  Description
 With the explosion of generative AI tools like ChatGPT, Midjourney, and DALL·E, users increasingly rely on well-crafted prompts to get high-quality outputs. However, managing, testing, and iterating on prompts is disorganized. PromptCrafter provides an API backend for saving, categorizing, sharing, and testing generative AI prompts.
 
-##  Problem Statement
+## 2.  Problem Statement
 Prompt engineering is powerful but under-supported from a tooling perspective. Users lack a backend system to store prompt versions, share them with collaborators, or evaluate output quality. PromptCrafter solves this by offering an authenticated API that lets users manage their personal or team prompt collections.
 
 ## 3. Technical Components
