@@ -1,4 +1,20 @@
 # PromptCrafter
+
+** Project Update (Week 8):**
+- ✅ Project scaffolding is complete.
+- ✅ MongoDB connection is established using Mongoose.
+- ✅ Express server is up and running.
+- ✅ User authentication with JWT is implemented.
+- ✅ CRUD routes for prompts and logs are done.
+- ✅ Basic test cases created.
+-  Still to do:
+  - Improve error handling and validation.
+  - Implement search/filter functionality.
+  - Add optional OpenAI integration for prompt testing.
+  - Finalize frontend demo or Postman collection.
+  - Reach 80%+ test coverage.
+  - Polish project and prepare for final submission (Week 10).
+
 PromptCrafter provides an API backend for saving, categorizing, sharing, and testing generative AI prompts.
 
 ## 1.  Description
