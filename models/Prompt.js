@@ -8,4 +8,6 @@ const promptSchema = new mongoose.Schema({
   tags: [String],
 }, { timestamps: true });
 
+promptSchema.index({ title: 'text', content: 'text', tags: 'text' });
+
 module.exports = mongoose.model('Prompt', promptSchema);

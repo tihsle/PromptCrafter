@@ -1,13 +1,18 @@
 const request = require('supertest');
-const app = require('./app');
+const app = require('../app');
+
 let token;
 let promptId;
 
 beforeAll(async () => {
-  const res = await request(app).post('/auth/login').send({
-    email: 'test@example.com',
-    password: 'password123',
-  });
+  const credentials = {
+    email: `test${Date.now()}@example.com`,  // ensure unique email
+    password: 'test123',
+  };
+
+  await request(app).post('/auth/signup').send(credentials);
+
+  const res = await request(app).post('/auth/login').send(credentials);
   token = res.body.token;
 });
 
@@ -17,9 +22,8 @@ describe('Prompt Routes', () => {
       .post('/prompts')
       .set('Authorization', `Bearer ${token}`)
       .send({
-        title: 'Blog Post',
-        content: 'Write a blog post about AI.',
-        model: 'ChatGPT',
+        title: 'My prompt',
+        content: 'Write a story about AI.',
         tags: ['blog', 'ai'],
       });
     expect(res.statusCode).toBe(201);
@@ -36,7 +40,7 @@ describe('Prompt Routes', () => {
 
   it('should update a prompt', async () => {
     const res = await request(app)
-      .patch(`/prompts/${promptId}`)
+      .patch(`/prompts/${promptId}`)  
       .set('Authorization', `Bearer ${token}`)
       .send({ title: 'Updated Title' });
     expect(res.statusCode).toBe(200);

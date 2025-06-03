@@ -1,8 +1,10 @@
 const request = require('supertest');
-const app = require('./app'); // adjust path as needed
+const app = require('../app'); 
+
+jest.setTimeout(10000);
 
 describe('Auth Routes', () => {
-  const user = { email: 'test@example.com', password: 'password123' };
+  const user = { email: `test${Date.now()}@example.com`, password: 'password123' };
 
   it('should sign up a new user', async () => {
     const res = await request(app)
