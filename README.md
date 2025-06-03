@@ -2,6 +2,9 @@
 
 PromptCrafter provides an API backend for saving, categorizing, sharing, and testing generative AI prompts.
 
+Final project for University of Washington at Seattle Full-Stack Development With JavaScript Certificate - 2025.  
+Utilizes Railway to host API and Mongo Atlas for cloud database.
+
 ## 1.  Description
 With the explosion of generative AI tools like ChatGPT, Midjourney, and DALL·E, users increasingly rely on well-crafted prompts to get high-quality outputs. However, managing, testing, and iterating on prompts is disorganized. PromptCrafter provides an API backend for saving, categorizing, sharing, and testing generative AI prompts.
 
