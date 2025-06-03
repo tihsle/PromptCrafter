@@ -1,5 +1,20 @@
 # PromptCrafter
 
+** Project Update (Week 8):**
+- ✅ Project scaffolding is complete.
+- ✅ MongoDB connection is established using Mongoose.
+- ✅ Express server is up and running.
+- ✅ User authentication with JWT is implemented.
+- ✅ CRUD routes for prompts and logs are done.
+- ✅ Basic test cases created.
+-  Still to do:
+  - Improve error handling and validation.
+  - Implement search/filter functionality.
+  - Add optional OpenAI integration for prompt testing.
+  - Finalize frontend demo or Postman collection.
+  - Reach 80%+ test coverage.
+  - Polish project and prepare for final submission (Week 10).
+
 PromptCrafter provides an API backend for saving, categorizing, sharing, and testing generative AI prompts.
 
 ## 1.  Description
@@ -79,6 +94,11 @@ Prompt engineering is powerful but under-supported from a tooling perspective. U
 ```
 
 ---
+
+###  External Data Integration
+(Optional): Fetch output from OpenAI’s API or Other AI API for live prompt testing.
+
+---
 ## 4. Project Requirements Alignment
 
 | Requirement                                | Met? | Notes |
@@ -88,30 +108,22 @@ Prompt engineering is powerful but under-supported from a tooling perspective. U
 | Two sets of CRUD routes                    | yes    | `/prompts` and `/logs` |
 | Indexes for performance and uniqueness     | yes   | Email (unique), tags/text fields indexed |
 | Text Search / Aggregation / Lookup         | yes    | Full-text search via MongoDB `$text` |
+| External data (optional)                   | yes   | Optional OpenAI integration |
 | >80% test coverage                         | yes    | Jest + Supertest |
-| Postman or frontend demo                   | yes    |  Postman collection |
+| Postman or frontend demo                   | yes    | Will build a simple frontend OR provide Postman collection |
 
 ---
 
+## 5. Timeline
 
-## 5. Self-Evaluation
-
-### What Went Well
-- Splitting code into models, routes, and controllers made it easy to manage.
-- Authentication with JWT worked smoothly across protected routes.
-- Tests with Jest and Supertest helped catch bugs early.
-- MongoDB text search made querying prompts much more flexible.
-
-### What Didn’t Go Well
-- Some tests failed at first due to repeated signup attempts and token issues.
-- Test setup needed better cleanup to avoid timeouts and leftover connections.
-
-### What I Learned
-- How to structure a backend API with authentication, search, and tests.
-- Importance of using proper indexes and handling async code in tests.
-
-Overall, PromptCrafter was a highly rewarding backend project that taught me a great deal about structuring real-world APIs with authentication, search, and testing.
-
+| Week | Tasks                                                                 |
+|------|-----------------------------------------------------------------------|
+| 5    | Scaffold project, set up MongoDB models, implement auth              |
+| 6    | Build out CRUD routes for `/prompts` with validation and testing     |
+| 7    | Add `/logs` routes and connect to prompt usage tracking              |
+| 8    | Write Jest/Supertest coverage, add search & filters                  |
+| 9    | Optional: OpenAI API or Other AI API integration, polish errors/responses            |
+| 10   | Prepare demo, finish README, submit and present                      |
 
 
 
